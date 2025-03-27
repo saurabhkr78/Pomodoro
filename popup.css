@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    width: 300px;
+    background: #f5f5f5;
+    padding: 15px;
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.timer-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.timer-display {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#startBtn {
+    background: #4CAF50;
+    color: white;
+}
+
+#pauseBtn {
+    background: #FFC107;
+    color: #333;
+}
+
+#resetBtn {
+    background: #f44336;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.tasks-section {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#addTaskBtn {
+    background: #2196F3;
+    color: white;
+}
+
+.task-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    background: #f8f9fa;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.task-item button {
+    padding: 4px 8px;
+    font-size: 12px;
+    background: #dc3545;
+    color: white;
+}
+
+.task-item.completed {
+    background: #e9ecef;
+    text-decoration: line-through;
+    color: #6c757d;
+} 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Floating Pomodoro Timer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="timer-section">
+            <div class="timer-display">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <div class="timer-controls">
+                <button id="startBtn">Start</button>
+                <button id="pauseBtn">Pause</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+        </div>
+        
+        <div class="tasks-section">
+            <div class="task-input">
+                <input type="text" id="taskInput" placeholder="Add a new task...">
+                <button id="addTaskBtn">Add</button>
+            </div>
+            <div class="task-list" id="taskList">
+                <!-- Tasks will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html> 

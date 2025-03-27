@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Pomodoro Icons</title>
+</head>
+<body>
+    <canvas id="icon16" width="16" height="16"></canvas>
+    <canvas id="icon48" width="48" height="48"></canvas>
+    <canvas id="icon128" width="128" height="128"></canvas>
+    <script>
+        function drawIcon(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            ctx.fillStyle = '#4CAF50';
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/2, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // Timer circle
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = size/8;
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/3, -Math.PI/2, Math.PI * 1.5);
+            ctx.stroke();
+            
+            // Timer hands
+            ctx.strokeStyle = 'white';
+            ctx.lineWidth = size/16;
+            
+            // Hour hand
+            ctx.beginPath();
+            ctx.moveTo(size/2, size/2);
+            ctx.lineTo(size/2, size/4);
+            ctx.stroke();
+            
+            // Minute hand
+            ctx.beginPath();
+            ctx.moveTo(size/2, size/2);
+            ctx.lineTo(size/2 + size/4, size/2);
+            ctx.stroke();
+            
+            // Center dot
+            ctx.fillStyle = 'white';
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/16, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        // Generate icons
+        drawIcon('icon16', 16);
+        drawIcon('icon48', 48);
+        drawIcon('icon128', 128);
+    </script>
+</body>
+</html> 
